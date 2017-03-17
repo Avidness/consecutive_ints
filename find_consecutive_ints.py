@@ -1,3 +1,5 @@
+# Alan David Ness
+# https://github.com/Avidness
 
 # Returns an array of number differences between each pair in the sub_array
 def get_diff(sub_array):
