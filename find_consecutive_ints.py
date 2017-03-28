@@ -22,5 +22,15 @@ def find_consecutive_runs(in_array):
 			out_array.append(i)
 	return out_array if len(out_array) > 0 else None
 
+def run_test():
+	assert (find_consecutive_runs([1,2,3]) == [0])
+	assert (find_consecutive_runs([3,2,1]) == [0])
+	assert (find_consecutive_runs(None) == None)
+	assert (find_consecutive_runs([0]) == None)
+	assert (find_consecutive_runs() == None)
+
 in_array = [1, 2, 3, 5, 10, 9, 8, 9, 10, 11, 7, 8, 7]
 print find_consecutive_runs(in_array)
+print find_consecutive_runs([1,2,3,4])
+print find_consecutive_runs([1,2,3])
+run_test()
