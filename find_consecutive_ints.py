@@ -15,15 +15,17 @@ def is_consecutive(sub_array):
 
 # Check each sub_array of size seq_len
 def find_consecutive_runs(in_array):
-	if in_array == None: return None
+	if in_array == None: return None	
 	seq_len = 3
+	last_index = len(in_array) - seq_len + 1
 	out_array = []
-	for i in range(0, len(in_array)-seq_len+1):
+	for i in range(0, last_index):
 		if is_consecutive( in_array[i:i+seq_len] ):
 			out_array.append(i)
 	return out_array if len(out_array) > 0 else None
 
 def run_test():
+	assert (find_consecutive_runs([2,6,1,4,5,6]) == [3])
 	assert (find_consecutive_runs([1,2,3]) == [0])
 	assert (find_consecutive_runs([3,2,1]) == [0])
 	assert (find_consecutive_runs(None) == None)
