@@ -14,7 +14,8 @@ def is_consecutive(sub_array):
 	return all(x == 1 for x in diff) or all(x == -1 for x in diff)
 
 # Check each sub_array of size seq_len
-def find_consecutive_runs(in_array, seq_len):
+def find_consecutive_runs(in_array):
+	seq_len = 3
 	out_array = []	
 	for i in range(0, len(in_array)-seq_len):
 		if is_consecutive( in_array[i:i+seq_len] ):
@@ -22,5 +23,4 @@ def find_consecutive_runs(in_array, seq_len):
 	return out_array if len(out_array) > 0 else None
 
 in_array = [1, 2, 3, 5, 10, 9, 8, 9, 10, 11, 7, 8, 7]
-seq_len = 3
-print find_consecutive_runs(in_array, seq_len)
+print find_consecutive_runs(in_array)
